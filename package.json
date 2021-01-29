@@ -7,6 +7,7 @@
     "test": "mocha --require test/setup",
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get DATABASE_URL) npm run migrate",
     "start": "node src/server",
     "dev": "nodemon ./src/server"
   },
