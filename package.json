@@ -1,7 +1,7 @@
 {
   "name": "journal",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Scripts",
   "main": "server.js",
   "scripts": {
     "test": "mocha --require test/setup",
@@ -27,5 +27,17 @@
     "postgrator": "^4.1.1",
     "supertest": "^6.0.1",
     "xss": "^1.0.8"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losmanzanos/gratitudes-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/losmanzanos/gratitudes-server/issues"
+  },
+  "homepage": "https://github.com/losmanzanos/gratitudes-server#readme"
 }
