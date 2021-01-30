@@ -9,7 +9,9 @@
     "migrate:test": "env NODE_ENV=test npm run migrate",
     "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get DATABASE_URL) npm run migrate",
     "start": "node src/server",
-    "dev": "nodemon ./src/server"
+    "dev": "nodemon ./src/server",
+    "predeploy": "npm audit && npm run migrate:production",
+    "deploy": "git push heroku main"
   },
   "author": "",
   "license": "ISC",
