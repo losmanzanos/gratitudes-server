@@ -3,12 +3,14 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const { NODE_ENV } = require("./config");
+const { NODE_ENV, DATABASE_URL } = require("./config");
 const gratitudesRouter = require("./gratitudes/gratitudes-router");
 const authRouter = require("./auth/auth-router");
 const usersRouter = require("./users/users-router");
 
 const app = express();
+
+console.log(DATABASE_URL);
 
 app.use(
   morgan(NODE_ENV === "production" ? "tiny" : "common", {
